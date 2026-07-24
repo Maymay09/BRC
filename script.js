@@ -137,7 +137,6 @@ const SAMPLE_FAQS = [
   { q:"Are BodiedRight products safe?", a:"Yes. All our products are made from natural, food-grade ingredients. However, we always recommend a free consultation first, especially if you have existing health conditions." },
   { q:"Do you deliver nationwide?", a:"We deliver to all 36 states in Nigeria. Lagos orders typically arrive within 24-48 hours, while other states take 3-5 working days." },
   { q:"Can I combine multiple products?", a:"Absolutely — many of our combo bundles are designed to be used together for faster, fuller results. Your consultation will guide the best combination for you." },
-  { q:"Is there a payment on delivery option?", a:"Pay on delivery is available in select Lagos locations. All other orders are paid securely online via Paystack." },
   { q:"Will I lose the results if I stop using the products?", a:"Weight gained through healthy nutrition-supporting products is generally maintained as long as you continue a balanced diet, similar to any wellness routine." },
   { q:"Do you offer refunds?", a:"Due to the nature of consumable wellness products, we do not offer refunds on opened items, but we're happy to help resolve any product concerns directly." },
   { q:"How do I know which product is right for me?", a:"Fill out our free consultation form and our wellness team will recommend a personalized plan based on your goals, body type and health history." }
@@ -153,7 +152,7 @@ function futureDate(days){ const d=new Date(); d.setDate(d.getDate()+days); retu
 
 const DEFAULT_SETTINGS = {
   logo:"BodiedRight by Cheedah",
-  heroHeading:"Make your body goal a reality.",
+  heroHeading:"Nigeria's trusted functional nutrition brand for women!",
   heroSub:"Doctor-informed capsules, syrups and oils to help you gain weight, fill out your frame and feel radiant in your own skin — the healthy, natural way.",
   whatsapp:"08083907112",
   instagram:"https://www.instagram.com/bodiedrightby_cheedah?igsh=aXlrcnBlc3BiMXZn",
@@ -162,7 +161,7 @@ const DEFAULT_SETTINGS = {
   email:"bodiedrightbycheedah@gmail.com", phone:"08083907112",
   footerText:"..make your body goal a reality. Helping Nigerian women achieve real, healthy body transformations.",
   refundPolicy:"We do not offer refunds on opened or used consumable wellness products, in line with standard health and safety practice. If an item arrives damaged or incorrect, contact us within 48 hours of delivery with your order number and photos, and we will arrange a replacement or store credit.",
-  deliveryPolicy:"We deliver nationwide across Nigeria. Lagos orders are typically delivered within 24-48 hours; other states take 3-5 working days. Delivery fees are calculated at checkout based on your state. Pay-on-delivery is available in select Lagos locations.",
+  deliveryPolicy:"We deliver nationwide across Nigeria. Lagos orders are typically delivered within 24-48 hours; other states take 3-5 working days. Delivery fees are calculated at checkout based on your state.",
   privacyPolicy:"BodiedRight by Cheedah collects only the information needed to process your order and consultation requests — name, phone number, email and delivery address. We never sell your data to third parties. Information shared during consultations is kept confidential and used only to guide your personalised recommendation.",
   termsPolicy:"By placing an order with BodiedRight by Cheedah, you confirm that the information provided is accurate and that you are purchasing for personal use. Results vary from person to person. Product descriptions are for informational purposes and are not a substitute for professional medical advice."
 };
@@ -268,12 +267,8 @@ function productCardHTML(p){
 }
 
 function renderProductGrids(){
-  const products = getData(LS.products);
-  document.getElementById('featuredGrid').innerHTML = products.filter(p=>p.featured).slice(0,4).map(productCardHTML).join('') || emptyMsg();
-  document.getElementById('bestsellerGrid').innerHTML = products.filter(p=>p.bestSeller).slice(0,4).map(productCardHTML).join('') || emptyMsg();
   renderShopGrid();
 }
-function emptyMsg(){ return `<p class="empty-state">No products yet.</p>`; }
 
 function renderShopGrid(){
   const products = getData(LS.products);
@@ -462,28 +457,18 @@ function renderInstaGrid(){
 }
 let heroIndex = 0, heroTimer;
 function renderHeroSlider(){
-  const products = getData(LS.products);
   const el = document.getElementById('heroSlider');
-  if(!products.length){ el.innerHTML = ''; return; }
+  const slides = ['hero-1.jpeg', 'hero-2.jpeg'];
 
-  // Prefer featured products for the hero, fall back to whatever exists
-  const featured = products.filter(p=>p.featured);
-  const chosen = (featured.length ? featured : products).slice(0,3);
-  const slides = chosen.map(p=> ({ img:p.image, caption:p.name }));
-
-  el.innerHTML = slides.map((s,i)=> `
-    <div class="hero-slide ${i===0?'active':''}" style="background-image:url('${s.img}')">
-      <div class="hero-slide-caption"><span>${s.caption}</span></div>
-    </div>`).join('');
+  el.innerHTML = slides.map((src,i)=> `
+    <div class="hero-slide ${i===0?'active':''}" style="background-image:url('${src}')"></div>`).join('');
   clearInterval(heroTimer);
-  if(slides.length > 1){
-    heroTimer = setInterval(()=>{
-      const allSlides = el.querySelectorAll('.hero-slide');
-      allSlides[heroIndex].classList.remove('active');
-      heroIndex = (heroIndex+1) % allSlides.length;
-      allSlides[heroIndex].classList.add('active');
-    }, 4000);
-  }
+  heroTimer = setInterval(()=>{
+    const allSlides = el.querySelectorAll('.hero-slide');
+    allSlides[heroIndex].classList.remove('active');
+    heroIndex = (heroIndex+1) % allSlides.length;
+    allSlides[heroIndex].classList.add('active');
+  }, 4000);
 }
 
 /* ---------------------------------------------------------------------
