@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BodiedRight by Cheedah — Make Your Body Goal a Reality</title>
+<meta name="description" content="BodiedRight by Cheedah is Nigeria's premium weight gain and body enhancement brand. Shop capsules, syrups, massage oils and combo bundles crafted to help you make your body goal a reality.">
+<link rel="icon" type="image/png" href="logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,500&family=Jost:wght@300;400;500;600;700&family=Alex+Brush&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div id="loader">
+  <div class="loader-mark">
+    <img src="logo.png" alt="BodiedRight by Cheedah" class="loader-logo">
+  </div>
+</div>
+
+<!-- ============ TOP ANNOUNCEMENT BAR ============ -->
+<div class="announce-bar" id="announceBar">
+  <div class="announce-track">
+    <span><i class="fa-solid fa-truck"></i>&nbsp; Free delivery in Lagos on orders above ₦50,000</span>
+    <span><i class="fa-solid fa-shield-heart"></i>&nbsp; 100% Natural &amp; Body Goal Approved</span>
+    <span><i class="fa-solid fa-star"></i>&nbsp; ..make your body goal a reality</span>
+  </div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo" id="logoLink"><img src="logo.png" alt="BodiedRight by Cheedah" id="logoImg"></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#shop" class="nav-link">Shop</a>
+      <a href="#combos" class="nav-link">Combo Deals</a>
+      <a href="#consultation" class="nav-link">Consultation</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="icon-btn cart-btn" id="cartToggle" aria-label="Cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- search bar dropdown -->
+  <div class="search-panel" id="searchPanel">
+    <input type="text" id="searchInput" placeholder="Search for capsules, syrups, oils...">
+    <button id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="mobile-link">Home</a>
+  <a href="#shop" class="mobile-link">Shop</a>
+  <a href="#combos" class="mobile-link">Combo Deals</a>
+  <a href="#consultation" class="mobile-link">Consultation</a>
+  <a href="#testimonials" class="mobile-link">Testimonials</a>
+  <a href="#faq" class="mobile-link">FAQ</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <a href="#" class="mobile-link admin-link" id="mobileAdminLink">Admin Login</a>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-curve-bg">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <path d="M-100,650 C200,450 350,750 650,600 C950,450 1000,700 1300,550" fill="none" stroke="#B285C9" stroke-opacity="0.3" stroke-width="2"/>
+      <path d="M-100,500 C250,300 400,600 700,450 C1000,300 1050,550 1300,400" fill="none" stroke="#D7B7E7" stroke-opacity="0.4" stroke-width="2"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-copy fade-up">
+      <span class="eyebrow">Nigeria's Trusted Body Enhancement Brand</span>
+      <h1>Make your body<br><em>goal a reality.</em></h1>
+      <p class="hero-sub">Doctor-informed capsules, syrups and oils to help you gain weight, fill out your frame and feel radiant in your own skin — the healthy, natural way.</p>
+      <div class="hero-ctas">
+        <a href="#shop" class="btn btn-primary ripple">Shop the Collection</a>
+        <a href="#consultation" class="btn btn-outline ripple">Get Free Consultation</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="counter" data-target="3200">0</span><small>Happy Clients</small></div>
+        <div class="stat"><span class="counter" data-target="12000">0</span><small>Orders Delivered</small></div>
+        <div class="stat"><span class="counter" data-target="98">0</span><small>% Satisfaction</small></div>
+      </div>
+    </div>
+    <div class="hero-visual fade-up delay-1">
+      <div class="hero-slider" id="heroSlider"></div>
+    </div>
+  </div>
+  <a href="#shop" class="scroll-cue" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- ============ PROMO BANNER (dynamic, admin managed) ============ -->
+<section class="promo-banner" id="promoBanner"></section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-us section">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Why BodiedRight</span>
+    <h2>Made for the way your body actually works</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card fade-up">
+      <i class="fa-solid fa-leaf"></i>
+      <h3>100% Natural</h3>
+      <p>Every formula is built from herbal, food-grade ingredients with no harsh chemicals or fillers.</p>
+    </div>
+    <div class="why-card fade-up delay-1">
+      <i class="fa-solid fa-user-doctor"></i>
+      <h3>Expert Guided</h3>
+      <p>Free 1-on-1 consultation with our wellness team before and after your purchase.</p>
+    </div>
+    <div class="why-card fade-up delay-2">
+      <i class="fa-solid fa-truck-fast"></i>
+      <h3>Nationwide Delivery</h3>
+      <p>Discreet, fast delivery to every state in Nigeria, with pay-on-delivery in select areas.</p>
+    </div>
+    <div class="why-card fade-up delay-3">
+      <i class="fa-solid fa-heart"></i>
+      <h3>Real Results</h3>
+      <p>Thousands of transformations backed by real reviews and visible before &amp; after photos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PRODUCTS ============ -->
+<section class="section" id="featured">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Handpicked</span>
+    <h2>Featured Products</h2>
+  </div>
+  <div class="product-grid" id="featuredGrid"></div>
+</section>
+
+<!-- ============ BEST SELLERS ============ -->
+<section class="section alt-bg" id="bestsellers">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Customer Favorites</span>
+    <h2>Best Sellers</h2>
+  </div>
+  <div class="product-grid" id="bestsellerGrid"></div>
+</section>
+
+<!-- ============ SHOP ============ -->
+<section class="section" id="shop">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Full Catalogue</span>
+    <h2>Shop All Products</h2>
+  </div>
+
+  <div class="shop-controls fade-up">
+    <div class="shop-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="shopSearch" placeholder="Search products...">
+    </div>
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="capsules">Capsules</option>
+      <option value="syrups">Syrups</option>
+      <option value="oils">Massage Oils</option>
+      <option value="teas">Teas</option>
+      <option value="accessories">Accessories</option>
+    </select>
+    <select id="sortFilter">
+      <option value="default">Sort: Default</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+      <option value="name">Name: A-Z</option>
+    </select>
+  </div>
+
+  <div class="product-grid" id="shopGrid"></div>
+  <p class="empty-state" id="shopEmpty" style="display:none;">No products match your search. Try a different keyword or category.</p>
+</section>
+
+<!-- ============ COMBO DEALS ============ -->
+<section class="section combo-section" id="combos">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Save More</span>
+    <h2>Combo Deals</h2>
+    <p class="section-sub">Bundled rituals curated by our wellness team for faster, fuller results.</p>
+  </div>
+  <div class="combo-grid" id="comboGrid"></div>
+</section>
+
+<!-- ============ TRANSFORMATION GALLERY ============ -->
+<section class="section alt-bg transform-section">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Real Results</span>
+    <h2>Before &amp; After</h2>
+  </div>
+  <div class="transform-grid" id="transformGrid"></div>
+</section>
+
+<!-- ============ CONSULTATION CTA ============ -->
+<section class="consult-cta section">
+  <div class="consult-cta-inner fade-up">
+    <div>
+      <span class="eyebrow">Not sure where to start?</span>
+      <h2>Talk to our wellness team — completely free</h2>
+      <p>Tell us your goals and body type, and we'll recommend the exact ritual for you.</p>
+    </div>
+    <a href="#consultation" class="btn btn-primary ripple">Book Free Consultation</a>
+  </div>
+</section>
+
+<!-- ============ CONSULTATION FORM ============ -->
+<section class="section consult-section" id="consultation">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Personalized Plan</span>
+    <h2>Free Consultation</h2>
+    <p class="section-sub">Fill the form below and a BodiedRight specialist will reach out to you within 24 hours.</p>
+  </div>
+
+  <form class="consult-form fade-up" id="consultForm">
+    <div class="form-grid">
+      <div class="form-field">
+        <label>Full Name *</label>
+        <input type="text" name="fullName" required>
+      </div>
+      <div class="form-field">
+        <label>Phone Number *</label>
+        <input type="tel" name="phone" required placeholder="080XXXXXXXX">
+      </div>
+      <div class="form-field">
+        <label>WhatsApp Number</label>
+        <input type="tel" name="whatsapp" placeholder="080XXXXXXXX">
+      </div>
+      <div class="form-field">
+        <label>Email *</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label>Age *</label>
+        <input type="number" name="age" min="16" max="70" required>
+      </div>
+      <div class="form-field">
+        <label>Gender *</label>
+        <select name="gender" required>
+          <option value="">Select</option>
+          <option>Female</option>
+          <option>Male</option>
+          <option>Prefer not to say</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Current Weight (kg) *</label>
+        <input type="number" name="currentWeight" required>
+      </div>
+      <div class="form-field">
+        <label>Desired Weight (kg) *</label>
+        <input type="number" name="desiredWeight" required>
+      </div>
+      <div class="form-field">
+        <label>Appetite Level *</label>
+        <select name="appetite" required>
+          <option value="">Select</option>
+          <option>Very Low</option>
+          <option>Low</option>
+          <option>Average</option>
+          <option>High</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Health Concerns</label>
+        <input type="text" name="healthConcerns" placeholder="e.g. ulcer, allergies (optional)">
+      </div>
+      <div class="form-field">
+        <label>Current Medications</label>
+        <input type="text" name="medications" placeholder="Optional">
+      </div>
+      <div class="form-field full">
+        <label>Additional Notes</label>
+        <textarea name="notes" rows="4" placeholder="Tell us more about your goals..."></textarea>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary ripple">Submit Consultation</button>
+  </form>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section alt-bg" id="testimonials">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Kind Words</span>
+    <h2>What Our Clients Say</h2>
+  </div>
+  <div class="testimonial-slider-wrap fade-up">
+    <button class="slider-arrow left" id="testiPrev"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="testimonial-track" id="testimonialTrack"></div>
+    <button class="slider-arrow right" id="testiNext"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+  <div class="slider-dots" id="testiDots"></div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq-section" id="faq">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Questions</span>
+    <h2>Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-list" id="faqList"></div>
+</section>
+
+<!-- ============ INSTAGRAM PREVIEW ============ -->
+<section class="section alt-bg insta-section">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Follow Along</span>
+    <h2>@bodiedrightby_cheedah</h2>
+  </div>
+  <div class="insta-grid" id="instaGrid"></div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter-section">
+  <div class="newsletter-inner fade-up">
+    <h2>Join the BodiedRight Circle</h2>
+    <p>Get wellness tips, early access to new products and exclusive discounts.</p>
+    <form id="newsletterForm">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn btn-primary ripple">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact-section" id="contact">
+  <div class="section-head fade-up">
+    <span class="eyebrow center">Get In Touch</span>
+    <h2>Contact Us</h2>
+  </div>
+  <div class="contact-grid fade-up">
+    <div class="contact-info">
+      <a href="#" class="contact-item" id="contactWhatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> <span>WhatsApp: 08083907112</span></a>
+      <a href="#" class="contact-item" id="contactInstagram" target="_blank"><i class="fa-brands fa-instagram"></i> <span>@bodiedrightby_cheedah</span></a>
+      <a href="#" class="contact-item" id="contactTiktok" target="_blank"><i class="fa-brands fa-tiktok"></i> <span>@bodiedright_by_cheedah</span></a>
+      <a href="#" class="contact-item" id="contactEmail"><i class="fa-solid fa-envelope"></i> <span>bodiedrightbycheedah@gmail.com</span></a>
+      <a href="#" class="contact-item" id="contactPhone"><i class="fa-solid fa-phone"></i> <span>08083907112</span></a>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary ripple">Send Message</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-curve">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C300,0 900,60 1200,30 L1200,0 L0,0 Z" fill="var(--nude)"></path></svg>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-col brand-col">
+      <img src="logo.png" alt="BodiedRight by Cheedah" class="footer-logo" id="footerLogoImg">
+      <p id="footerText">..make your body goal a reality. Helping Nigerian women achieve real, healthy body transformations.</p>
+      <div class="footer-socials">
+        <a href="#" id="footerInstagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" id="footerWhatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" id="footerTiktok" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#shop">All Products</a>
+      <a href="#combos">Combo Deals</a>
+      <a href="#bestsellers">Best Sellers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#consultation">Consultation</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p>Subscribe for wellness tips &amp; offers.</p>
+      <form class="footer-newsletter" id="footerNewsletter">
+        <input type="email" placeholder="Email address" required>
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 BodiedRight by Cheedah. All rights reserved.</p>
+    <div class="footer-policy-links">
+      <a href="#" id="policyRefund">Refund Policy</a>
+      <a href="#" id="policyDelivery">Delivery Policy</a>
+      <a href="#" id="policyPrivacy">Privacy Policy</a>
+      <a href="#" id="policyTerms">Terms &amp; Conditions</a>
+      <a href="#" id="adminEntryLink">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ============ PRODUCT MODAL ============ -->
+<div class="modal-overlay" id="productModalOverlay">
+  <div class="modal product-modal">
+    <button class="modal-close" id="productModalClose"><i class="fa-solid fa-xmark"></i></button>
+    <div id="productModalBody"></div>
+  </div>
+</div>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <h3>Your Cart</h3>
+    <button id="cartClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Total</span><strong id="cartTotal">₦0</strong></div>
+    <button class="btn btn-primary ripple" id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+</div>
+<div class="overlay" id="cartOverlay"></div>
+
+<!-- ============ CHECKOUT MODAL ============ -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="modal checkout-modal">
+    <button class="modal-close" id="checkoutClose"><i class="fa-solid fa-xmark"></i></button>
+    <h2>Checkout</h2>
+    <div class="checkout-layout">
+      <form class="checkout-form" id="checkoutForm">
+        <div class="form-field"><label>Full Name *</label><input type="text" name="name" required></div>
+        <div class="form-field"><label>Phone Number *</label><input type="tel" name="phone" required></div>
+        <div class="form-field"><label>Email *</label><input type="email" name="email" required></div>
+        <div class="form-field"><label>Delivery Address *</label><input type="text" name="address" required></div>
+        <div class="form-row">
+          <div class="form-field"><label>State *</label>
+            <select name="state" id="checkoutState" required></select>
+          </div>
+          <div class="form-field"><label>City *</label><input type="text" name="city" required></div>
+        </div>
+      </form>
+      <div class="order-summary">
+        <h4>Order Summary</h4>
+        <div id="checkoutItems"></div>
+        <div class="summary-row"><span>Subtotal</span><span id="checkoutSubtotal">₦0</span></div>
+        <div class="summary-row"><span>Delivery Fee</span><span id="checkoutDelivery">₦0</span></div>
+        <div class="summary-row total"><span>Grand Total</span><span id="checkoutGrandTotal">₦0</span></div>
+        <button class="btn btn-primary ripple pay-btn" id="paystackBtn"><i class="fa-solid fa-lock"></i> Pay with Paystack</button>
+        <p class="secure-note"><i class="fa-solid fa-shield-halved"></i> Secure demo checkout — no real charge will occur.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ADMIN LOGIN MODAL ============ -->
+<div class="modal-overlay" id="adminLoginOverlay">
+  <div class="modal admin-login-modal">
+    <button class="modal-close" id="adminLoginClose"><i class="fa-solid fa-xmark"></i></button>
+    <h2>Admin Login</h2>
+    <form id="adminLoginForm">
+      <div class="form-field"><label>Username</label><input type="text" name="username" required></div>
+      <div class="form-field"><label>Password</label><input type="password" name="password" required></div>
+      <p class="admin-error" id="adminLoginError">Invalid username or password.</p>
+      <button type="submit" class="btn btn-primary ripple">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ ADMIN DASHBOARD ============ -->
+<div class="admin-panel" id="adminPanel">
+  <div class="admin-mobile-bar">
+    <button class="admin-mobile-toggle" id="adminMobileToggle" aria-label="Open admin menu"><i class="fa-solid fa-bars"></i></button>
+    <span class="admin-mobile-title">BodiedRight Admin</span>
+  </div>
+  <div class="admin-sidebar-overlay" id="adminSidebarOverlay"></div>
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="admin-brand">BodiedRight <span>Admin</span></div>
+    <nav class="admin-nav">
+      <button class="admin-nav-btn active" data-tab="dashboard"><i class="fa-solid fa-chart-pie"></i> Dashboard</button>
+      <button class="admin-nav-btn" data-tab="products"><i class="fa-solid fa-box"></i> Products</button>
+      <button class="admin-nav-btn" data-tab="combos"><i class="fa-solid fa-gift"></i> Combos</button>
+      <button class="admin-nav-btn" data-tab="promos"><i class="fa-solid fa-bullhorn"></i> Promo Banners</button>
+      <button class="admin-nav-btn" data-tab="testimonials"><i class="fa-solid fa-star"></i> Testimonials</button>
+      <button class="admin-nav-btn" data-tab="consultations"><i class="fa-solid fa-clipboard-list"></i> Consultations</button>
+      <button class="admin-nav-btn" data-tab="orders"><i class="fa-solid fa-receipt"></i> Orders</button>
+      <button class="admin-nav-btn" data-tab="delivery"><i class="fa-solid fa-truck"></i> Delivery Zones</button>
+      <button class="admin-nav-btn" data-tab="settings"><i class="fa-solid fa-gear"></i> Settings</button>
+    </nav>
+    <button class="admin-logout" id="adminLogout"><i class="fa-solid fa-right-from-bracket"></i> Exit Admin</button>
+  </aside>
+
+  <div class="admin-content">
+
+    <!-- DASHBOARD -->
+    <section class="admin-tab active" id="tab-dashboard">
+      <h2>Dashboard</h2>
+      <div class="admin-cards">
+        <div class="admin-card"><i class="fa-solid fa-box"></i><div><span id="statProducts">0</span><small>Total Products</small></div></div>
+        <div class="admin-card"><i class="fa-solid fa-receipt"></i><div><span id="statOrders">0</span><small>Total Orders</small></div></div>
+        <div class="admin-card"><i class="fa-brands fa-whatsapp"></i><div><span id="statPendingNotify">0</span><small>Awaiting WhatsApp Notice</small></div></div>
+        <div class="admin-card"><i class="fa-solid fa-clipboard-list"></i><div><span id="statConsultations">0</span><small>Consultations</small></div></div>
+        <div class="admin-card"><i class="fa-solid fa-gift"></i><div><span id="statCombos">0</span><small>Combo Deals</small></div></div>
+        <div class="admin-card revenue"><i class="fa-solid fa-sack-dollar"></i><div><span id="statRevenue">₦0</span><small>Revenue</small></div></div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="admin-tab" id="tab-products">
+      <div class="admin-tab-head">
+        <h2>Product Management</h2>
+        <button class="btn btn-primary" id="addProductBtn"><i class="fa-solid fa-plus"></i> Add Product</button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="productsTable"><thead><tr>
+          <th>Image</th><th>Name</th><th>Category</th><th>Price</th><th>Discount</th><th>Featured</th><th>Best Seller</th><th>Actions</th>
+        </tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <!-- COMBOS -->
+    <section class="admin-tab" id="tab-combos">
+      <div class="admin-tab-head">
+        <h2>Combo Management</h2>
+        <button class="btn btn-primary" id="addComboBtn"><i class="fa-solid fa-plus"></i> Add Combo</button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="combosTable"><thead><tr>
+          <th>Image</th><th>Name</th><th>Products</th><th>Original</th><th>Promo</th><th>Actions</th>
+        </tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <!-- PROMOS -->
+    <section class="admin-tab" id="tab-promos">
+      <div class="admin-tab-head">
+        <h2>Promo Management</h2>
+        <button class="btn btn-primary" id="addPromoBtn"><i class="fa-solid fa-plus"></i> New Banner</button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="promosTable"><thead><tr>
+          <th>Image</th><th>Title</th><th>Description</th><th>Button Text</th><th>Enabled</th><th>Actions</th>
+        </tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="admin-tab" id="tab-testimonials">
+      <div class="admin-tab-head">
+        <h2>Testimonials Management</h2>
+        <button class="btn btn-primary" id="addTestimonialBtn"><i class="fa-solid fa-plus"></i> Add Testimonial</button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="testimonialsTable"><thead><tr>
+          <th>Photo</th><th>Name</th><th>Rating</th><th>Review</th><th>Actions</th>
+        </tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <!-- CONSULTATIONS -->
+    <section class="admin-tab" id="tab-consultations">
+      <h2>Consultation Requests</h2>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="consultationsTable"><thead><tr>
+          <th>Name</th><th>Phone</th><th>Email</th><th>Goal</th><th>Status</th><th>Actions</th>
+        </tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <!-- ORDERS -->
+    <section class="admin-tab" id="tab-orders">
+      <h2>Orders</h2>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="ordersTable"><thead><tr>
+          <th>Order ID</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th>Notify Customer</th>
+        </tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <!-- DELIVERY ZONES -->
+    <section class="admin-tab" id="tab-delivery">
+      <div class="admin-tab-head">
+        <h2>Delivery Zones</h2>
+        <button class="btn btn-primary" id="addDeliveryZoneBtn"><i class="fa-solid fa-plus"></i> Add Zone</button>
+      </div>
+      <p style="color:var(--charcoal-soft);font-size:13.5px;margin:-14px 0 20px;">These states and fees populate the "State" dropdown at checkout. The zone named "Others" is used as the fallback fee for any state not listed.</p>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="deliveryZonesTable"><thead><tr>
+          <th>State / Zone</th><th>Delivery Fee</th><th>Actions</th>
+        </tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="admin-tab" id="tab-settings">
+      <h2>Website Settings</h2>
+      <form class="settings-form" id="settingsForm">
+        <div class="form-field"><label>Logo / Brand Name</label><input type="text" name="logo" id="settingLogo"></div>
+        <div class="form-field"><label>Hero Heading</label><input type="text" name="heroHeading" id="settingHeroHeading"></div>
+        <div class="form-field"><label>Hero Subheading</label><textarea name="heroSub" id="settingHeroSub" rows="3"></textarea></div>
+        <div class="form-field"><label>WhatsApp</label><input type="text" name="whatsapp" id="settingWhatsapp"></div>
+        <div class="form-field"><label>Instagram Handle</label><input type="text" name="instagram" id="settingInstagram"></div>
+        <div class="form-field"><label>Facebook Page</label><input type="text" name="facebook" id="settingFacebook"></div>
+        <div class="form-field"><label>TikTok Handle</label><input type="text" name="tiktok" id="settingTiktok"></div>
+        <div class="form-field"><label>Email</label><input type="email" name="email" id="settingEmail"></div>
+        <div class="form-field"><label>Phone</label><input type="text" name="phone" id="settingPhone"></div>
+        <div class="form-field full"><label>Footer Text</label><textarea name="footerText" id="settingFooterText" rows="3"></textarea></div>
+        <div class="form-field full"><label>Refund Policy</label><textarea name="refundPolicy" id="settingRefundPolicy" rows="4"></textarea></div>
+        <div class="form-field full"><label>Delivery Policy</label><textarea name="deliveryPolicy" id="settingDeliveryPolicy" rows="4"></textarea></div>
+        <div class="form-field full"><label>Privacy Policy</label><textarea name="privacyPolicy" id="settingPrivacyPolicy" rows="4"></textarea></div>
+        <div class="form-field full"><label>Terms &amp; Conditions</label><textarea name="termsPolicy" id="settingTermsPolicy" rows="4"></textarea></div>
+        <button type="submit" class="btn btn-primary ripple">Save Settings</button>
+      </form>
+    </section>
+
+  </div>
+</div>
+
+<!-- ============ ADMIN PRODUCT FORM MODAL ============ -->
+<div class="modal-overlay" id="productFormOverlay">
+  <div class="modal admin-form-modal">
+    <button class="modal-close" id="productFormClose"><i class="fa-solid fa-xmark"></i></button>
+    <h2 id="productFormTitle">Add Product</h2>
+    <form id="productForm">
+      <input type="hidden" name="id">
+      <div class="form-field"><label>Product Image</label><input type="file" name="imageFile" accept="image/*"><img class="img-preview" id="productImgPreview" style="display:none"></div>
+      <div class="form-field"><label>Product Name *</label><input type="text" name="name" required></div>
+      <div class="form-field"><label>Short Description *</label><input type="text" name="shortDesc" required></div>
+      <div class="form-field"><label>Full Description</label><textarea name="fullDesc" rows="3"></textarea></div>
+      <div class="form-field"><label>Benefits (comma separated)</label><input type="text" name="benefits"></div>
+      <div class="form-field"><label>Ingredients (comma separated)</label><input type="text" name="ingredients"></div>
+      <div class="form-field"><label>Usage Instructions</label><input type="text" name="usage"></div>
+      <div class="form-row">
+        <div class="form-field"><label>Price (₦) *</label><input type="number" name="price" required></div>
+        <div class="form-field"><label>Discount Price (₦)</label><input type="number" name="discountPrice"></div>
+      </div>
+      <div class="form-field"><label>Category *</label>
+        <select name="category" required>
+          <option value="capsules">Capsules</option>
+          <option value="syrups">Syrups</option>
+          <option value="oils">Massage Oils</option>
+          <option value="teas">Teas</option>
+          <option value="accessories">Accessories</option>
+        </select>
+      </div>
+      <div class="form-row checkboxes">
+        <label><input type="checkbox" name="featured"> Featured</label>
+        <label><input type="checkbox" name="bestSeller"> Best Seller</label>
+      </div>
+      <button type="submit" class="btn btn-primary ripple">Save Product</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ ADMIN COMBO FORM MODAL ============ -->
+<div class="modal-overlay" id="comboFormOverlay">
+  <div class="modal admin-form-modal">
+    <button class="modal-close" id="comboFormClose"><i class="fa-solid fa-xmark"></i></button>
+    <h2 id="comboFormTitle">Add Combo</h2>
+    <form id="comboForm">
+      <input type="hidden" name="id">
+      <div class="form-field"><label>Combo Image</label><input type="file" name="imageFile" accept="image/*"><img class="img-preview" id="comboImgPreview" style="display:none"></div>
+      <div class="form-field"><label>Combo Name *</label><input type="text" name="name" required></div>
+      <div class="form-field"><label>Products Included (comma separated) *</label><input type="text" name="products" required></div>
+      <div class="form-row">
+        <div class="form-field"><label>Original Price (₦) *</label><input type="number" name="originalPrice" required></div>
+        <div class="form-field"><label>Promo Price (₦) *</label><input type="number" name="promoPrice" required></div>
+      </div>
+      <button type="submit" class="btn btn-primary ripple">Save Combo</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ ADMIN PROMO FORM MODAL ============ -->
+<div class="modal-overlay" id="promoFormOverlay">
+  <div class="modal admin-form-modal">
+    <button class="modal-close" id="promoFormClose"><i class="fa-solid fa-xmark"></i></button>
+    <h2 id="promoFormTitle">New Promo Banner</h2>
+    <form id="promoForm">
+      <input type="hidden" name="id">
+      <div class="form-field"><label>Banner Image</label><input type="file" name="imageFile" accept="image/*"><img class="img-preview" id="promoImgPreview" style="display:none"></div>
+      <div class="form-field"><label>Promo Title *</label><input type="text" name="title" required></div>
+      <div class="form-field"><label>Promo Description *</label><input type="text" name="description" required></div>
+      <div class="form-field"><label>Button Text *</label><input type="text" name="buttonText" required value="Shop Now"></div>
+      <div class="form-field"><label>Countdown End Date</label><input type="date" name="endDate"></div>
+      <div class="form-row checkboxes">
+        <label><input type="checkbox" name="enabled" checked> Enabled</label>
+      </div>
+      <button type="submit" class="btn btn-primary ripple">Save Banner</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ ADMIN TESTIMONIAL FORM MODAL ============ -->
+<div class="modal-overlay" id="testimonialFormOverlay">
+  <div class="modal admin-form-modal">
+    <button class="modal-close" id="testimonialFormClose"><i class="fa-solid fa-xmark"></i></button>
+    <h2 id="testimonialFormTitle">Add Testimonial</h2>
+    <form id="testimonialForm">
+      <input type="hidden" name="id">
+      <div class="form-field"><label>Customer Photo</label><input type="file" name="photoFile" accept="image/*"><img class="img-preview" id="testiPhotoPreview" style="display:none"></div>
+      <div class="form-row">
+        <div class="form-field"><label>Before Photo</label><input type="file" name="beforeFile" accept="image/*"><img class="img-preview" id="testiBeforePreview" style="display:none"></div>
+        <div class="form-field"><label>After Photo</label><input type="file" name="afterFile" accept="image/*"><img class="img-preview" id="testiAfterPreview" style="display:none"></div>
+      </div>
+      <div class="form-field"><label>Customer Name *</label><input type="text" name="name" required></div>
+      <div class="form-field"><label>Star Rating *</label>
+        <select name="rating" required><option value="5">5 Stars</option><option value="4">4 Stars</option><option value="3">3 Stars</option></select>
+      </div>
+      <div class="form-field"><label>Review *</label><textarea name="review" rows="3" required></textarea></div>
+      <button type="submit" class="btn btn-primary ripple">Save Testimonial</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ POLICY MODAL ============ -->
+<div class="modal-overlay" id="policyOverlay">
+  <div class="modal policy-modal">
+    <button class="modal-close" id="policyClose"><i class="fa-solid fa-xmark"></i></button>
+    <h2 id="policyModalTitle">Policy</h2>
+    <div id="policyModalBody" class="policy-body"></div>
+  </div>
+</div>
+
+<!-- ============ ADMIN: CONSULTATION DETAIL MODAL ============ -->
+<div class="modal-overlay" id="consultationDetailOverlay">
+  <div class="modal admin-form-modal consultation-detail-modal">
+    <button class="modal-close" id="consultationDetailClose"><i class="fa-solid fa-xmark"></i></button>
+    <h2>Consultation Details</h2>
+    <div id="consultationDetailBody"></div>
+  </div>
+</div>
+
+<!-- ============ ADMIN DELIVERY ZONE FORM MODAL ============ -->
+<div class="modal-overlay" id="deliveryZoneFormOverlay">
+  <div class="modal admin-form-modal">
+    <button class="modal-close" id="deliveryZoneFormClose"><i class="fa-solid fa-xmark"></i></button>
+    <h2 id="deliveryZoneFormTitle">Add Delivery Zone</h2>
+    <form id="deliveryZoneForm">
+      <input type="hidden" name="id">
+      <input type="hidden" name="originalState">
+      <div class="form-field"><label>State / Zone Name *</label><input type="text" name="state" required placeholder="e.g. Lagos, or Others for fallback"></div>
+      <div class="form-field"><label>Delivery Fee (₦) *</label><input type="number" name="fee" required min="0"></div>
+      <button type="submit" class="btn btn-primary ripple">Save Zone</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ NOTIFICATION TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCsL0ec49QHhhq7NTGTch2jc2EgGxr5RbM",
+    authDomain: "bodiedright-by-cheedah-b5775.firebaseapp.com",
+    projectId: "bodiedright-by-cheedah-b5775",
+    storageBucket: "bodiedright-by-cheedah-b5775.firebasestorage.app",
+    messagingSenderId: "760793253841",
+    appId: "1:760793253841:web:c04b08e594a201fa82c2f0"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+</body>
+</html>
