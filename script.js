@@ -458,7 +458,7 @@ function renderInstaGrid(){
 let heroIndex = 0, heroTimer;
 function renderHeroSlider(){
   const el = document.getElementById('heroSlider');
-  const slides = ['hero-1.jpeg', 'hero-2.jpeg'];
+  const slides = ['hero-1.jpeg', 'hero-2.jpeg','hero-3.jpeg'];
 
   el.innerHTML = slides.map((src,i)=> `
     <div class="hero-slide ${i===0?'active':''}" style="background-image:url('${src}')"></div>`).join('');
