@@ -29,7 +29,7 @@
 <!-- ============ TOP ANNOUNCEMENT BAR ============ -->
 <div class="announce-bar" id="announceBar">
   <div class="announce-track">
-    <span><i class="fa-solid fa-truck"></i>&nbsp; Free delivery in Lagos on orders above ₦50,000</span>
+    <!-- <span><i class="fa-solid fa-truck"></i>&nbsp; Free delivery in Lagos on orders above ₦50,000</span> -->
     <span><i class="fa-solid fa-shield-heart"></i>&nbsp; 100% Natural &amp; Body Goal Approved</span>
     <span><i class="fa-solid fa-star"></i>&nbsp; ..make your body goal a reality</span>
   </div>
@@ -137,7 +137,7 @@
     <div class="why-card fade-up delay-2">
       <i class="fa-solid fa-truck-fast"></i>
       <h3>Nationwide Delivery</h3>
-      <p>Discreet, fast delivery to every state in Nigeria, with pay-on-delivery in select areas.</p>
+      <p>Discreet, fast delivery to every state in Nigeria.</p>
     </div>
     <div class="why-card fade-up delay-3">
       <i class="fa-solid fa-heart"></i>
@@ -772,6 +772,24 @@
 <div class="toast" id="toast"></div>
 
 <script src="script.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCsL0ec49QHhhq7NTGTch2jc2EgGxr5RbM",
+    authDomain: "bodiedright-by-cheedah-b5775.firebaseapp.com",
+    projectId: "bodiedright-by-cheedah-b5775",
+    storageBucket: "bodiedright-by-cheedah-b5775.firebasestorage.app",
+    messagingSenderId: "760793253841",
+    appId: "1:760793253841:web:c04b08e594a201fa82c2f0"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
 </body>
 </html>
